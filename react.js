@@ -1,25 +1,21 @@
-import { useReducer } from "react";
+import { useRef } from "react";
 import ReactDOM from "react-dom/client";
 
-const initialTodos = 0;
+function App() {
+  const inputElement = useRef();
 
-const reducer = (state, action) => {
-  if(action.type==="increament"){return state+1};
-  if(action.type==="decreament"){return state-1};
-
-};
-
-function APP() {
-  const [state, dispatch] = useReducer(reducer, initialTodos);
+  const focusInput = () => {
+    inputElement.current.focus();
+    inputElement.current.style.backgroundcolor="#9900a";
+  };
 
   return (
     <>
-      <p>{state}</p>
-      <button onClick={()=>{dispatch(type:"increament")}}>inc</button>
-      <button onClick={()=>{dispatch(type:"decreament")}}>dec</button>
+      <input type="text" ref={inputElement} />
+      <button onClick={focusInput}>Focus Input</button>
     </>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<APP />);
+root.render(<App />);
