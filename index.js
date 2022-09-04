@@ -640,24 +640,24 @@
 
 
 /////////////////////////////////////////////////////////////////////
-let p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-          resolve("Value 1");
-  }, 1000);
-});
+// let p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//           resolve("Value 1");
+//   }, 1000);
+// });
 
-let p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-          // resolve("Value 2");
-          reject(new Error("Error"));
-  }, 2000);
-});
+// let p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//           // resolve("Value 2");
+//           reject(new Error("Error"));
+//   }, 2000);
+// });
 
-let p3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-          resolve("Value 3");
-  }, 3000);
-});
+// let p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//           resolve("Value 3");
+//   }, 3000);
+// });
 
 // p1.then((value) => {
 //         console.log(value)
@@ -671,10 +671,10 @@ let p3 = new Promise((resolve, reject) => {
 //         console.log(value)
 // })
 
-let promise_all= Promise.allSettled([p1,p2,p3])
-promise_all.then((value)=>{
-  console.log(value)
-})
+// let promise_all= Promise.allSettled([p1,p2,p3])
+// promise_all.then((value)=>{
+//   console.log(value)
+// })
 
 // let promise_all = Promise.allSettled([p1, p2, p3])
 // let promise_all = Promise.any([p1, p2, p3])
@@ -684,3 +684,31 @@ promise_all.then((value)=>{
 // promise_all.then((value) => {
 //   console.log(value)
 // })
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////async await 
+
+
+const func=async ()=>{
+  const  func2=async ()=>{
+   return new Promise((res,rej)=>{
+         res('resoled')
+   })
+
+}
+setTimeout(func2,4000);
+
+  console.log(await func2()) 
+  
+}
+func();
