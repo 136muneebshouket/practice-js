@@ -548,19 +548,57 @@
 //currying means functions within in a functions;
 
 //like
-function sum(a){
+// function sum(a){
 
-  return function(b){
-    return function(c){
-      return function(d){
-        console.log(a,b,c,d)
-      } 
-    } 
-  }  
+//   return function(b){
+//     return function(c){
+//       return function(d){
+//         console.log(a,b,c,d)
+//       } 
+//     } 
+//   }  
 
+// }
+
+// // how to write it in a single line of code.
+// const sum=(a)=>(b)=>(c)=>(d)=>console.log(a,b,c,d);
+
+// sum(10)(9)(7)(5); 
+
+
+
+
+
+
+
+
+// how to find factorial of Number
+
+
+  let num = 5;
+  
+  
+    for(let i = num; i>1;  ){
+     
+     
+        i=i-1;
+          var fact= num*i;
+         num = fact; 
+         
+        
+    }
+    console.log(fact);
+
+
+    /////////////////////////////////
+    //another method
+
+for( var fact=1; num>1; num--){
+
+
+  fact=fact*num;
 }
+   
+console.log(fact);
+   
 
-// how to write it in a single line of code.
-const sum=(a)=>(b)=>(c)=>(d)=>console.log(a,b,c,d);
-
-sum(10)(9)(7)(5); 
