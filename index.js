@@ -29,6 +29,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // for(var i = 1; i<=100; i++){
    
 // var prime = true;
@@ -43,6 +51,14 @@
 //     }
    
 // }
+
+
+
+
+
+
+
+
 
 
 // let arr = [];
@@ -69,12 +85,26 @@
 
 
 
+
+
+
+
+
+
 // split method of string method
 
 // let text = "abcdefg";
 // const myArray = text.split(",");
 // document.getElementById("demo").innerHTML = myArray;
 // console.log(myArray)
+
+
+
+
+
+
+
+
 
 // // getting number from user and finding prime number btween it
 // const form = document.querySelector(".grocery-form");
@@ -106,6 +136,17 @@
 
 // }
 
+
+
+
+
+
+
+
+
+
+
+
 // generating random numbers from an arrray
 
 // let arr = [];
@@ -119,6 +160,16 @@
 //  document.getElementById("demo1").innerHTML=arr[INDEX];
 
 //   }
+
+
+
+
+
+
+
+
+
+
 
 
   //match method of string methods
@@ -143,6 +194,14 @@
             
 
 
+
+
+
+
+
+
+
+
 //sum of all erlements in an array
 
 
@@ -154,6 +213,14 @@
 
 // }
 // console.log(total)
+
+
+
+
+
+
+
+
 
 
 
@@ -170,6 +237,12 @@
 //             document.getElementById("demo1").innerHTML=match;
             
 //             };
+
+
+
+
+
+
 
 
 
@@ -218,6 +291,14 @@
 
 
 
+
+
+
+
+
+
+
+
 // for(var i = 1; i<=100; i++){
    
 // var prime = true;
@@ -232,6 +313,17 @@
 //     }
    
 // }
+
+
+
+
+
+
+
+
+
+
+
 
 
 // let arr = [];
@@ -258,12 +350,28 @@
 
 
 
+
+
+
+
 // split method of string method
 
 // let text = "abcdefg";
 // const myArray = text.split(",");
 // document.getElementById("demo").innerHTML = myArray;
 // console.log(myArray)
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // getting number from user and finding prime number btween it
 // const form = document.querySelector(".grocery-form");
@@ -295,6 +403,17 @@
 
 // }
 
+
+
+
+
+
+
+
+
+
+
+
 // generating random numbers from an arrray
 
 // let arr = [];
@@ -308,6 +427,15 @@
 //  document.getElementById("demo1").innerHTML=arr[INDEX];
 
 //   }
+
+
+
+
+
+
+
+
+
 
 
   //match method of string methods
@@ -330,6 +458,15 @@
 //              }
              
             
+
+
+
+
+
+
+
+
+
 
 
 //sum of all erlements in an array
@@ -378,13 +515,52 @@
 
 
 
+
+
+
+
+
+
+
+
 ////////////////////////////////////////
 //localecompare method of string
 
 
-let text1 = "ab";
-let text2 = "cd";
-let result = text1.localeCompare(text2);
+// let text1 = "ab";
+// let text2 = "cd";
+// let result = text1.localeCompare(text2);
 
-document.getElementById("demo").innerHTML = result;
+// document.getElementById("demo").innerHTML = result;
 
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+//currying in javascript
+//currying means functions within in a functions;
+
+//like
+function sum(a){
+
+  return function(b){
+    return function(c){
+      return function(d){
+        console.log(a,b,c,d)
+      } 
+    } 
+  }  
+
+}
+
+// how to write it in a single line of code.
+const sum=(a)=>(b)=>(c)=>(d)=>console.log(a,b,c,d);
+
+sum(10)(9)(7)(5); 
