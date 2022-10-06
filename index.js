@@ -575,30 +575,80 @@
 // how to find factorial of Number
 
 
-  let num = 5;
+//   let num = 5;
   
   
-    for(let i = num; i>1;  ){
+//     for(let i = num; i>1;  ){
      
      
-        i=i-1;
-          var fact= num*i;
-         num = fact; 
+//         i=i-1;
+//           var fact= num*i;
+//          num = fact; 
          
         
-    }
-    console.log(fact);
+//     }
+//     console.log(fact);
 
 
-    /////////////////////////////////
-    //another method
+//     /////////////////////////////////
+//     //another method
 
-for( var fact=1; num>1; num--){
+// for( var fact=1; num>1; num--){
 
 
-  fact=fact*num;
+//   fact=fact*num;
+// }
+   
+// console.log(fact);
+   
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let index=0
+let forward=true;
+const func=()=>{
+ 
+
+
+
+ if(forward==true){
+  
+  
+  if(index==fruits.length-1){
+    forward=false;
+  }else{ 
+    // console.log(fruits[index]);
+    document.getElementById('id').innerHTML=fruits[index]
+    index+=1;}
+  
+
+  
 }
-   
-console.log(fact);
-   
+ else if (forward==false) {
+  // console.log(fruits[index]);
+  
+  if(index==0){
+    forward=true;
+  }
+  else{ 
+    // console.log(fruits[index]);
+    document.getElementById('id').innerHTML=fruits[index]
+     index-=1}
+ } 
 
+
+}
+setInterval(func,1000);
