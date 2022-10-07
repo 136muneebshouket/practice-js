@@ -615,40 +615,72 @@
 //////////////////////////////////////////////////////////////
 
 
-fruits = ["Banana", "Orange", "Apple", "Mango"];
-
-let index=0
-let forward=true;
-const func=()=>{
- 
 
 
+//////////////////////////////////////////////
+// const num= [45, 4, 9, 16, 25];
 
- if(forward==true){
-  
-  
-  if(index==fruits.length-1){
-    forward=false;
-  }else{ 
-    // console.log(fruits[index]);
-    document.getElementById('id').innerHTML=fruits[index]
-    index+=1;}
-  
+// const sum = num.reduce((accum,curr)=>{
+//   return accum+curr
+// })
 
-  
-}
- else if (forward==false) {
-  // console.log(fruits[index]);
-  
-  if(index==0){
-    forward=true;
-  }
-  else{ 
-    // console.log(fruits[index]);
-    document.getElementById('id').innerHTML=fruits[index]
-     index-=1}
- } 
+// console.log(sum);
+// let avg=sum/num.length; 
+// console.log(avg);
 
 
-}
-setInterval(func,1000);
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////
+let p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+          resolve("Value 1");
+  }, 1000);
+});
+
+let p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+          // resolve("Value 2");
+          reject(new Error("Error"));
+  }, 2000);
+});
+
+let p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+          resolve("Value 3");
+  }, 3000);
+});
+
+// p1.then((value) => {
+//         console.log(value)
+// })
+
+// p2.then((value) => {
+//         console.log(value)
+// })
+
+// p3.then((value) => {
+//         console.log(value)
+// })
+
+let promise_all= Promise.allSettled([p1,p2,p3])
+promise_all.then((value)=>{
+  console.log(value)
+})
+
+// let promise_all = Promise.allSettled([p1, p2, p3])
+// let promise_all = Promise.any([p1, p2, p3])
+// let promise_all = Promise.race([p1, p2, p3])
+// let promise_all = Promise.resolve(6)
+// let promise_all = Promise.reject(new Error("Hey"))
+// promise_all.then((value) => {
+//   console.log(value)
+// })
