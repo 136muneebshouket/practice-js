@@ -699,16 +699,46 @@
 ////////////////////////////////////////////////async await 
 
 
-const func=async ()=>{
-  const  func2=async ()=>{
-   return new Promise((res,rej)=>{
-         res('resoled')
-   })
+// const func=async ()=>{
+//   const  func2=async ()=>{
+//    return new Promise((res,rej)=>{
+//          res('resoled')
+//    })
 
-}
-setTimeout(func2,4000);
+// }
+// setTimeout(func2,4000);
 
-  console.log(await func2()) 
+//   console.log(await func2()) 
   
+// }
+// func();
+
+
+////////////////////////////////////////////////////localstorage
+
+
+////////////////////////////prototype
+
+let a={
+  name:"muneeb",
+  gender:"male"
+
 }
-func();
+
+let b={
+  rollno:"202458"
+}
+
+a.__proto__=b;
+// let clg=a.rollno
+// console.log(clg);
+b.__proto__={
+  name2:"mirza"
+}
+
+let clg= a.name2;
+console.log(clg)
+// here a protype is b and b proyptype is{
+  // name2:"mirza"
+// }
+//protoype chain
