@@ -719,26 +719,50 @@
 
 ////////////////////////////prototype
 
-let a={
-  name:"muneeb",
-  gender:"male"
+// let a={
+//   name:"muneeb",
+//   gender:"male"
 
-}
+// }
 
-let b={
-  rollno:"202458"
-}
+// let b={
+//   rollno:"202458"
+// }
 
-a.__proto__=b;
-// let clg=a.rollno
-// console.log(clg);
-b.__proto__={
-  name2:"mirza"
-}
+// a.__proto__=b;
+// // let clg=a.rollno
+// // console.log(clg);
+// b.__proto__={
+//   name2:"mirza"
+// }
 
-let clg= a.name2;
-console.log(clg)
+// let clg= a.name2;
+// console.log(clg)
 // here a protype is b and b proyptype is{
   // name2:"mirza"
 // }
 //protoype chain
+
+
+
+///////////////////////////////////////////////////classes and objects
+
+class railwayform{
+  submit(){
+    alert(this.name+'your tickets are booked')
+
+  }
+   fill(givenname){
+    this.name=givenname
+   }
+}
+
+
+
+const form = new railwayform();
+const form2 = new railwayform();
+form.fill('muneeb');
+form2.fill('defaultxd');
+
+form.submit();
+form2.submit();
