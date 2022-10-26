@@ -746,23 +746,28 @@
 
 
 ///////////////////////////////////////////////////classes and objects
-
+//with constructor
 class railwayform{
+ constructor(givenname){
+   this.name=givenname
+ }
+
+
+
   submit(){
-    alert(this.name+'your tickets are booked')
+    alert(this.name+""+'your tickets are booked')
 
   }
-   fill(givenname){
-    this.name=givenname
-   }
+  //  fill(givenname){
+  //   this.name=givenname
+  //  }
 }
 
 
 
-const form = new railwayform();
-const form2 = new railwayform();
-form.fill('muneeb');
-form2.fill('defaultxd');
+const form = new railwayform('muneeb');
+const form2 = new railwayform('defaultxd');
+
 
 form.submit();
 form2.submit();
