@@ -747,27 +747,67 @@
 
 ///////////////////////////////////////////////////classes and objects
 //with constructor
-class railwayform{
- constructor(givenname){
-   this.name=givenname
- }
+// class railwayform{
+//  constructor(givenname){
+//    this.name=givenname
+//  }
 
 
 
-  submit(){
-    alert(this.name+""+'your tickets are booked')
+//   submit(){
+//     alert(this.name+""+'your tickets are booked')
 
-  }
-  //  fill(givenname){
-  //   this.name=givenname
-  //  }
+//   }
+//   //  fill(givenname){
+//   //   this.name=givenname
+//   //  }
+// }
+
+
+
+// const form = new railwayform('muneeb');
+// const form2 = new railwayform('defaultxd');
+
+
+// form.submit();
+// form2.submit();
+
+
+
+
+// const func=async()=>{
+
+  
+    
+   
+
+//        let mypromise= new Promise((resolve, reject)=>{
+
+//         setTimeout(()=>{
+//           let response="hello world"
+//           resolve(response)
+//            },3000)
+//        })
+//    let response= await mypromise;
+//    console.log(response);
+//    console.log("hello students");
+//    console.log("hello teacher");
+
+// }
+// func();
+
+///rest operator in javascript
+
+const func=(name,...args)=>{
+    
+
+  let sum=0
+   for(let i in args){
+    sum+=args[i];
+
+   }
+  console.log(`${name} ${sum}`)
+
 }
 
-
-
-const form = new railwayform('muneeb');
-const form2 = new railwayform('defaultxd');
-
-
-form.submit();
-form2.submit();
+func("muneeb",33,20,27)
