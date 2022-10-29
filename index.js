@@ -806,8 +806,15 @@ const func=(name,...args)=>{
     sum+=args[i];
 
    }
-  console.log(`${name} ${sum}`)
+  console.log(`${name} ${args}`)
 
 }
+let arr=[1,2,3,4,5,6]
+func("muneeb",...arr)
 
-func("muneeb",33,20,27)
+//spread operator in js
+
+
+let arr2=[7,8,9,0]
+let arr3=[...arr,...arr2]
+console.log(arr3);
