@@ -798,23 +798,150 @@
 
 ///rest operator in javascript
 
-const func=(name,...args)=>{
+// const func=(name,...args)=>{
     
 
-  let sum=0
-   for(let i in args){
-    sum+=args[i];
+//   let sum=0
+//    for(let i in args){
+//     sum+=args[i];
 
-   }
-  console.log(`${name} ${args}`)
+//    }
+//   console.log(`${name} ${args}`)
 
-}
-let arr=[1,2,3,4,5,6]
-func("muneeb",...arr)
+// }
+// let arr=[1,2,3,4,5,6]
+// func("muneeb",...arr)
 
 //spread operator in js
 
 
-let arr2=[7,8,9,0]
-let arr3=[...arr,...arr2]
-console.log(arr3);
+// let arr2=[7,8,9,0]
+// let arr3=[...arr,...arr2]
+// console.log(arr3);
+
+// let [one,two,...rest]=arr;
+
+
+// console.log(one)
+// console.log(two)
+// console.log(rest)
+
+
+
+
+// let arr=[1,2,2,3,4,4,5,6]
+
+// let purearr=[...new Set(arr)]
+
+// console.log(purearr);
+
+// let value=prompt('give value numbers')
+
+// let arr= value.toString().split("")
+
+
+
+// let arr2=arr.filter((num)=>{
+          
+//       for(var i=2; i <= arr.length; i++){
+
+//         if(num%i==0 && num!=i){
+//            return false;
+//         }
+//       }
+//       return true;
+
+
+// })
+
+// console.log(arr2);
+// let arr=[1,2,3,4,5,6,7,8,9,10]
+// let arr2=[6,7,8,9,10]
+
+// // console.log(arr2.length);
+// // for(let i=0; i<=arr2.length; i++){
+// //        let removelem=arr2[i]
+//   var result= arr.filter((elem,index)=>{
+//          for(var i=0; i<=arr2.length; i++){
+//               if(elem==arr2[i]){
+//                 return false;
+//               }
+//          }
+//         return true;
+//   })
+// //  console.log(arr2[i]);
+
+// // }
+// console.log(result);
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fLen = fruits.length;
+
+// let text = [];console.log(text)
+// for (let i = 0; i < fLen; i++) {
+//   text.push(fruits[i]) ;
+// }
+
+// console.log(fruits[1])
+
+// let num=1234567;
+// let text = num.toString();
+
+// const myArray = text.split("");
+// console.log(myArray);
+
+//  const input= document.getElementById('input')
+//  const ul= document.getElementById('ul')
+
+
+// const myArray=[];
+
+// function myfunc(){
+//   const Value=input.value
+//   console.log(Value);
+//   myArray.push(Value)
+
+//   ul.innerHTML=myArray.map((element,index)=>{
+//     return `<li>${element}</li>`
+//   }).join();
+// }
+
+
+
+// const ul= document.getElementById('ul')
+
+// const myArray=[];
+// function myfunc(){
+//   const Value = document.getElementById('input').value
+//   myArray.push(`<li>${Value}</li>`);
+//   ul.innerHTML=myArray
+//   console.log(myArray)
+//   input.value = '';
+// }
+
+
+//JavaScript code
+function countWords(str) {
+  //Edge case: an empty array
+    if (str.length === 0) {
+      return {};
+    } 
+    var output = {};
+    var strArr = str.split(" ")
+  //A loop
+    for (var i=0; i < strArr.length; i++) {
+      var word = strArr[i];
+      if (output[word] === undefined) {
+        output[word] = 1;
+      } else {
+        output[word] += 1;
+      }
+      
+    }
+    return output;
+  }
+  /* TEST CODE */
+  var output = countWords('ask a bunch. get a bunch'); 
+  console.log(output);
+  // { ask: 1, a: 2, bunch: 2, get: 1 }
